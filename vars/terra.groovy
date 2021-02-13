@@ -1,11 +1,11 @@
-def call() {
-    pipeline {
+def call (){
+pipeline {
     agent any
 
     stages { 
     stage('Terraform Init') {
             steps {
-    sh '''cd test
+    sh '''cd dev
     terraform init'''
         
             }
@@ -13,7 +13,7 @@ def call() {
         
      stage('Terraform Apply') {
             steps {
-    sh '''cd test
+    sh '''cd dev
     terraform apply -auto-approve'''
            
                 
