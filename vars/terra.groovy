@@ -5,7 +5,7 @@ pipeline {
     stages { 
     stage('Terraform Init') {
             steps {
-    sh '''cd dev
+    sh '''cd test
     terraform init'''
         
             }
@@ -13,7 +13,7 @@ pipeline {
         
      stage('Terraform Apply') {
             steps {
-    sh '''cd dev
+    sh '''cd test
     terraform apply -auto-approve'''
            
                 
